@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="springbootmybatis.mariadb.dao.UserDao">
+    <!--    <select id="selectTest" resultType="com.example.mariadb.vo.TestVo">-->
+    <select id="selectUsers" resultType="hashMap">
+        select * from member;
+    </select>
+
+    <select id="selectUserOne" parameterType="springbootmybatis.mariadb.domain.UserDomain" resultType="springbootmybatis.mariadb.domain.UserDomain">
+        select * from member where id = #{id};
+    </select>
+
+</mapper>
